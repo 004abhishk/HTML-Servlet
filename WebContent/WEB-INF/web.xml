@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>OnlineExamination</display-name>
+  <servlet>
+    <servlet-name>com.training.UserLogin</servlet-name>
+    <servlet-class>com.training.UserLogin</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>com.training.UserLogin</servlet-name>
+    <url-pattern>/UserLogin</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>com.training.UserInfo</servlet-name>
+    <servlet-class>com.training.UserInfo</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>com.training.UserInfo</servlet-name>
+    <url-pattern>/UserInfo</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>com.training.SignUp</servlet-name>
+    <servlet-class>com.training.SignUp</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>com.training.SignUp</servlet-name>
+    <url-pattern>/SignUp</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>com.training.ForgotPassword</servlet-name>
+    <servlet-class>com.training.ForgotPassword</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>com.training.ForgotPassword</servlet-name>
+    <url-pattern>/ForgotPassword</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>welcome.html</welcome-file>
+  </welcome-file-list>
+</web-app>
