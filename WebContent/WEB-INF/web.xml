@@ -33,6 +33,22 @@
     <servlet-name>com.training.ForgotPassword</servlet-name>
     <url-pattern>/ForgotPassword</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>com.training.SubjectNav</servlet-name>
+    <servlet-class>com.training.SubjectNav</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>com.training.SubjectNav</servlet-name>
+    <url-pattern>/SubjectNav</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>com.training.JavaResult</servlet-name>
+    <servlet-class>com.training.JavaResult</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>com.training.JavaResult</servlet-name>
+    <url-pattern>/JavaResult</url-pattern>
+  </servlet-mapping>
   <welcome-file-list>
     <welcome-file>welcome.html</welcome-file>
   </welcome-file-list>

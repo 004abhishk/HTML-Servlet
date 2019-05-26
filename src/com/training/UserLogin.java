@@ -13,13 +13,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public class UserLogin extends HttpServlet {
+	private static final long serialVersionUID = 1L;
 
 	public void init() {
 		System.out.println("do init method.");
 
 	}
 
-	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		System.out.println("do POST method.");
@@ -31,7 +31,7 @@ public class UserLogin extends HttpServlet {
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/OnlineExamination", "root", "root");
 			Statement stmt = con.createStatement();
-			//String whereCondition = "where username = " +"'" + uname + "'";
+			
 			ResultSet rs = stmt.executeQuery("select * from userlogin");
 			while (rs != null && rs.next()) {
 				userName = rs.getString("username");
@@ -41,7 +41,7 @@ public class UserLogin extends HttpServlet {
 				}	
 			}
 			if(uname.equalsIgnoreCase(userName) && upassword.equalsIgnoreCase(userPassword)) {
-				response.sendRedirect("UserInfo.html?Action=Submit");
+				response.sendRedirect("UserInfo?UserName="+userName);
 			}else {
 				response.sendRedirect("UserLogin.html");
 				System.out.println("User Login failed.");

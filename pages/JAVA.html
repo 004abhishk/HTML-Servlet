@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+	.hidden {
+		display: none;
+	}
+	.block{
+		display: block;
+	}
+</style>
+</head>
+<body>
+	<center><h3>JAVA Question</h3></center>
+	<form action="JavaResult" method="get">
+			<div id="row1" class="block">
+				<span>Question 1. <label>Which one is the OOPS feature?  </label></span><br/>
+				<span>
+					<input type="radio" name="Q1" value="inheritance" />Inheritance </br>
+					<input type="radio" name="Q1" value="encapsulation" />Encapsulation </br>
+					<input type="radio" name="Q1" value="polymorphishm" />Polymorphism </br>
+					<input type="radio" name="Q1" value="all" />All </br>
+				</span>
+			</div>
+			<div id="row2" class="hidden">
+				<span>Question 2. <label>What is the default value of float variable? </label></span><br>
+				<span>
+					<input type="radio" name="Q2" value="0.0d" />0.0d </br>
+					<input type="radio" name="Q2" value="0.0f" />0.0f </br>
+					<input type="radio" name="Q2" value="0" />0 </br>
+					<input type="radio" name="Q2" value="not defined" />not defined </br>
+				</span>
+			</div>
+			<div id="row3" class="hidden">
+				<span>Question 3. <label>What is static block?  </label></span><br>
+				<span>
+					<input type="radio" name="Q3" value="sync" />It is used to create synchronized code. </br>
+					<input type="radio" name="Q3" value="block" />There is no such block. </br>
+					<input type="radio" name="Q3" value="initialize" />It is used to initialize the static data member. It is executed before the main method at the time of class loading. </br>
+					<input type="radio" name="Q3" value="none" />None of the above. </br>
+				</span>
+			</div>
+			<div id="row4" class="hidden">
+				<span>Question 4. <label>Which of the following is a marker interface?  </label></span><br>
+				<span>
+					<input type="radio" name="Q4" value="serializable" />Serializable </br>
+					<input type="radio" name="Q4" value="comparable" />Comparable </br>
+					<input type="radio" name="Q4" value="clonable" />Clonable </br>
+					<input type="radio" name="Q4" value="none" />None of the above. </br>
+				</span>
+			</div>
+			<div><center><a href="#" onClick="previous()" id="prev" class="block">PREVIOUS</a>&nbsp;&nbsp;<a href="#" onClick="next()" id="nxt" class="block">NEXT</a>
+			&nbsp;&nbsp;<input type="submit" value="FINISH" id="finish" class="hidden"></button></center></div>	
+	</form>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script>
+	
+	$(document).ready(function(){
+		  $("#prev").click(function previous(){
+			  var r1= $("#row1").attr('class');
+			  var r2= $("#row2").attr('class');
+			  var r3= $("#row3").attr('class');
+			  var r4= $("#row4").attr('class');
+			  
+			  if(r1==='hidden' && r2==='block' && r3==='hidden' && r4==='hidden'){
+				  $("#row1").removeClass("hidden");
+				  $("#row1").addClass("block");
+				  $("#row2").removeClass("block");
+				  $("#row2").addClass("hidden");
+				  $("#row3").removeClass("hidden");
+				  $("#row3").addClass("hidden");
+				  $("#row4").removeClass("hidden");
+				  $("#row4").addClass("hidden");
+			  }
+			  
+			  if(r1==='hidden' && r2==='hidden' && r3==='block' && r4==='hidden'){
+				  $("#row1").removeClass("hidden");
+				  $("#row1").addClass("hidden");
+				  $("#row2").removeClass("hidden");
+				  $("#row2").addClass("block");
+				  $("#row3").removeClass("block");
+				  $("#row3").addClass("hidden");
+				  $("#row4").removeClass("hidden");
+				  $("#row4").addClass("hidden");
+			  }
+			  
+			  if(r1==='hidden' && r2==='hidden' && r3==='hidden' && r4==='block'){
+				  $("#row1").removeClass("hidden");
+				  $("#row1").addClass("hidden");
+				  $("#row2").removeClass("hidden");
+				  $("#row2").addClass("hidden");
+				  $("#row3").removeClass("hidden");
+				  $("#row3").addClass("block");
+				  $("#row4").removeClass("block");
+				  $("#row4").addClass("hidden");
+				  $("#nxt").removeClass("hidden");
+				  $("#nxt").addClass("block");
+				  $("#finish").removeClass("block");
+				  $("#finish").addClass("hidden");
+			  }
+		  });
+		});
+	
+	$(document).ready(function(){
+		  $("#nxt").click(function next(){
+			  var r1= $("#row1").attr('class');
+			  var r2= $("#row2").attr('class');
+			  var r3= $("#row3").attr('class');
+			  var r4= $("#row4").attr('class');
+			  
+			  if(r1==='hidden' && r2==='block' && r3==='hidden' && r4==='hidden'){
+				  $("#row1").removeClass("hidden");
+				  $("#row1").addClass("hidden");
+				  $("#row2").removeClass("block");
+				  $("#row2").addClass("hidden");
+				  $("#row3").removeClass("hidden");
+				  $("#row3").addClass("block");
+				  $("#row4").removeClass("hidden");
+				  $("#row4").addClass("hidden");
+			  }
+			  
+			  if(r1==='block' && r2==='hidden' && r3==='hidden' && r4==='hidden'){
+				  $("#row1").removeClass("block");
+				  $("#row1").addClass("hidden");
+				  $("#row2").removeClass("hidden");
+				  $("#row2").addClass("block");
+				  $("#row3").removeClass("hidden");
+				  $("#row3").addClass("hidden");
+				  $("#row4").removeClass("hidden");
+				  $("#row4").addClass("hidden");
+			  }
+			  
+			  if(r1==='hidden' && r2==='block' && r3==='hidden' && r4==='hidden'){
+				  $("#row1").removeClass("hidden");
+				  $("#row1").addClass("hidden");
+				  $("#row2").removeClass("block");
+				  $("#row2").addClass("hidden");
+				  $("#row3").removeClass("hidden");
+				  $("#row3").addClass("block");
+				  $("#row4").removeClass("hidden");
+				  $("#row4").addClass("hidden");
+			  }
+			  
+			  if(r1==='hidden' && r2==='hidden' && r3==='block' && r4==='hidden'){
+				  $("#row1").removeClass("hidden");
+				  $("#row1").addClass("hidden");
+				  $("#row2").removeClass("hidden");
+				  $("#row2").addClass("hidden");
+				  $("#row3").removeClass("block");
+				  $("#row3").addClass("hidden");
+				  $("#row4").removeClass("hidden");
+				  $("#row4").addClass("block");
+				  $("#nxt").removeClass("block");
+				  $("#nxt").addClass("hidden");
+				  $("#finish").removeClass("hidden");
+				  $("#finish").addClass("block");
+			  }
+		  });
+		});
+
+</script>
+</html>
